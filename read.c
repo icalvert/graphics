@@ -56,6 +56,28 @@ int		open_window(t_window *window)
 	return (0);
 }
 
+void draw_row_line()
+{
+	calulate starting and ending coordinates
+	store these in coord struct
+	draw_line(struct coord);
+}
+
+void draw_col_line()
+{
+	calulate starting and ending coordinates
+	store these in coord struct
+	draw_line(struct coord);
+}
+
+void draw_map(blahblah)
+{
+	iterate through entire 2d array
+	for each point
+		draw_col_line();
+		draw_row_line();
+}
+
 int		main(int argc, char **argv)
 {
 	int			i;
@@ -84,11 +106,12 @@ int		main(int argc, char **argv)
 		}
 	}
 	open_window(&window);
-	coord.x1 = 50;
+	i/*coord.x1 = 50;
 	coord.y1 = 50;
 	coord.x2 = 200;
 	coord.y2 = 200;
-	draw_line(&window, &coord);
+	draw_line(&window, &coord);*/
+	draw_map(&window, ar);
 	mlx_key_hook(window.window, key_hook, 0);
 	mlx_loop(window.mlx);
  	return (0);
